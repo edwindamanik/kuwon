@@ -1,0 +1,1623 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+:root {
+  --Roboto: 'Roboto', sans-serif;
+  --smootBlue: #EBF5FC;
+  --thickBlue: #2A4CA9;
+  --grey: #4F5159;
+}
+
+body {
+  background: #f8f8f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--Roboto);
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bottomNav {
+  display: none;
+}
+
+.leftNav {
+  position: fixed;
+  background-color: var(--grey);
+  width: 80px;
+  height: 100%;
+}
+
+.leftNav .logo {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leftNav .nav-items {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.leftNav .nav-items a {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 16px;
+}
+
+.leftNav .nav-items a.active, .leftNav .nav-items a:hover {
+  background-color: white;
+  color: var(--grey);
+}
+
+.topNav {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 10px lightgray;
+          box-shadow: 0px 5px 10px lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 30px;
+}
+
+.topNav .logoResponsive {
+  display: none;
+}
+
+.topNav .pointContent {
+  background: #2eafc0;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.topNav a {
+  color: var(--grey);
+  font-size: 16px;
+}
+
+.topNav .dropdown {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.topNav .dropdown .dropbtn {
+  background: none;
+  color: var(--grey);
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.topNav .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  -webkit-box-shadow: 1px 5px 10px #e9e9e9;
+          box-shadow: 1px 5px 10px #e9e9e9;
+  min-width: 160px;
+  z-index: 1;
+  margin-top: 50px;
+}
+
+.topNav .dropdown .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.topNav .dropdown .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.topNav .dropdown .show {
+  display: block;
+}
+
+.container {
+  position: absolute;
+  right: 0;
+  margin-left: 100px;
+  margin: 20px;
+  left: 80px;
+}
+
+.container .title {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+.container .title p {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--grey);
+}
+
+.container .title span {
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.container .title ul.breadcrumb {
+  padding: 20px 0px;
+  list-style: none;
+}
+
+.container .title ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+.container .title ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+.container .title ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+.container .title ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+.container .donasiContainer {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  margin-top: 30px;
+}
+
+.container .donasiContainer p {
+  background: rgba(22, 170, 71, 0.521);
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.container .donasiContainer .iconDonate {
+  font-size: 80px;
+  text-align: center;
+  margin: 50px;
+  color: #eb9595;
+}
+
+.container .donasiContainer .iconDonate i {
+  display: block;
+}
+
+.container .donasiContainer .iconDonate a {
+  font-size: 20px;
+  display: inline-block;
+  background: #139cb4;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container .grafikPengerjaan {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .grafikPengerjaan .bagianPertama {
+  background: #e5ff00;
+  display: inline-block;
+  padding: 20px;
+}
+
+.container .grafikPengerjaan .bagianPertama p {
+  color: black;
+}
+
+.container .grafikPengerjaan .bagianPertama span {
+  font-size: 40px;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.container .grafikPengerjaan .bagianKedua {
+  background: #60e238;
+  display: inline-block;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.container .grafikPengerjaan .bagianKedua p {
+  color: black;
+}
+
+.container .grafikPengerjaan .bagianKedua span {
+  font-size: 40px;
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.container .leaderboardContainer {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  margin-top: 30px;
+}
+
+.container .leaderboardContainer .containerss > header {
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+}
+
+.container .leaderboardContainer .containerss > header h3 {
+  font-weight: 600;
+  font-size: 2em;
+  text-align: left;
+  color: var(--grey);
+}
+
+.container .leaderboardContainer .wrapper {
+  line-height: 1.5em;
+  margin: 0 auto;
+  padding: 2em 0 3em;
+  width: 90%;
+  max-width: 2000px;
+  overflow: hidden;
+}
+
+.container .leaderboardContainer table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+
+.container .leaderboardContainer th {
+  background-color: #326295;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.container .leaderboardContainer td, .container .leaderboardContainer th {
+  padding: 1em 1.5em;
+  text-align: left;
+}
+
+.container .leaderboardContainer tbody th {
+  background-color: #2ea879;
+}
+
+.container .leaderboardContainer tbody tr:nth-child(2n-1) {
+  background-color: #f5f5f5;
+  -webkit-transition: all .125s ease-in-out;
+  transition: all .125s ease-in-out;
+}
+
+.container .leaderboardContainer tbody tr:hover {
+  background-color: rgba(50, 98, 149, 0.3);
+}
+
+.container .leaderboardContainer td.rank {
+  text-transform: capitalize;
+}
+
+.container .w-5 {
+  display: none;
+}
+
+.container .feedbackRespons {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  margin-top: 30px;
+}
+
+.container .feedbackRespons span.paginationFeedback {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.container .feedbackRespons .w-5 {
+  display: none;
+}
+
+.container .feedbackRespons .card {
+  margin-top: 10px;
+  border-radius: 5px;
+  background: #ececec;
+  padding: 10px;
+}
+
+.container .feedbackRespons .card .firstRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .feedbackRespons .card .firstRow img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.container .feedbackRespons .card .firstRow span {
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.container .feedbackRespons .card pre {
+  width: 100%;
+  font-size: 18px;
+  color: var(--grey);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+  font-style: italic;
+}
+
+.container .templateSoalLatihan {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  margin-top: 30px;
+}
+
+.container .templateSoalLatihan .pointContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .templateSoalLatihan .pointContainer .pointTotal {
+  background: #e9cc2c;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.container .templateSoalLatihan p {
+  color: var(--grey);
+}
+
+.container .templateSoalLatihan p.sudahDijawab {
+  background: var(--grey);
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.container .templateSoalLatihan p.belumDijawab {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.container .templateSoalLatihan a.submitSoal {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0px;
+  background: var(--grey);
+  color: white;
+}
+
+.container .templateSoalLatihan span {
+  display: inline-block;
+  color: red;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.container .templateSoalLatihan .pertanyaan {
+  margin-top: 20px;
+  padding: 20px;
+  border: 0.5px solid black;
+}
+
+.container .templateSoalLatihan .pertanyaan .numberStyle {
+  background: black;
+  color: white;
+  display: inline-block;
+  padding: 10px;
+}
+
+.container .templateSoalLatihan .pertanyaan img {
+  width: 500px;
+  height: auto;
+}
+
+.container .templateSoalLatihan .pertanyaan img[src=""] {
+  display: none;
+}
+
+.container .templateSoalLatihan .pertanyaan pre {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 18px;
+  color: black;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+.container .templateSoalLatihan .pertanyaan p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.container .templateSoalLatihan .pertanyaan .optionPilihan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .templateSoalLatihan .pertanyaan .optionPilihan span {
+  background: white;
+  color: black;
+  border: 0.5px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  padding: 10px;
+  font-style: normal;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.container .templateSoalLatihan button {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background: #3e7df1;
+  padding: 10px;
+  color: white;
+}
+
+.container .pesanTambahkanMateri {
+  text-align: center;
+  background-color: #75f175;
+  padding: 5px;
+}
+
+.container .pesanTambahkanMateri p {
+  color: white;
+  font-size: 16px;
+}
+
+.container .pesanTambahkanMateri2 {
+  text-align: center;
+  background-color: #df6757;
+  padding: 5px;
+}
+
+.container .pesanTambahkanMateri2 p {
+  color: white;
+  font-size: 16px;
+}
+
+.container .contentTambahSoal {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  margin-top: 30px;
+}
+
+.container .contentTambahSoal .formatPenambahanSoal {
+  background: white;
+  border: 2px solid black;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.container .contentTambahSoal .formatPenambahanSoal a.deleteSoal {
+  background-color: #ac1313;
+  padding: 5px;
+  border-radius: 5px;
+  border: 3px solid white;
+  color: white;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.container .contentTambahSoal .formatPenambahanSoal a.deleteSoal:hover {
+  color: #ac1313;
+  background: white;
+  border: 3px solid #ac1313;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.container .contentTambahSoal select, .container .contentTambahSoal textarea, .container .contentTambahSoal input, .container .contentTambahSoal button {
+  background: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--grey);
+  margin: 15px 0px 20px 0px;
+}
+
+.container .contentTambahSoal button {
+  background: var(--grey);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container .contentTambahSoal .tambahJumlahSoal {
+  text-align: right;
+}
+
+.container .contentTambahSoal .tambahJumlahSoal a {
+  background: #00aeff;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-style: 16px;
+  cursor: pointer;
+}
+
+.container .kelolaSoal {
+  margin-top: 30px;
+}
+
+.container .kelolaSoal .card3 {
+  margin-top: 10px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+.container .kelolaSoal .card3 .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.container .kelolaSoal .card3 .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.container .kelolaSoal .card3 .tab button:hover {
+  background-color: #ddd;
+}
+
+.container .kelolaSoal .card3 .tab button.active {
+  background-color: #ccc;
+}
+
+.container .kelolaSoal .card3 .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.container .kelolaSoal .card3 .tabcontent table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.container .kelolaSoal .card3 .tabcontent th, .container .kelolaSoal .card3 .tabcontent td {
+  text-align: left;
+  padding: 15px;
+}
+
+.container .kelolaSoal .card3 .tabcontent th a, .container .kelolaSoal .card3 .tabcontent td a {
+  background-color: #2bbae6;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.container .kelolaSoal .card3 .tabcontent tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.container .kelolaSoal .card2 {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+.container .kelolaSoal .card2 p {
+  color: var(--grey);
+  font-size: 16px;
+}
+
+.container .kelolaSoal .card2 a {
+  display: inline-block;
+  background: #31c031;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  margin-top: 25px;
+}
+
+.container .kelolaSoal .card2 .popUpPendidikan {
+  display: none;
+  width: 150px;
+  position: absolute;
+  background-color: white;
+  -webkit-box-shadow: 1px 5px 10px #d6d6d6;
+          box-shadow: 1px 5px 10px #d6d6d6;
+  left: 180px;
+  margin-top: -40px;
+}
+
+.container .kelolaSoal .card2 .popUpPendidikan a {
+  text-align: center;
+  display: block;
+  margin-top: 0px;
+  border-radius: 0px;
+  background: white;
+  color: black;
+}
+
+.container .kelolaSoal .card2 .popUpPendidikan a:hover {
+  background: #31c031;
+  color: white;
+}
+
+.container .kelolaSoal .card2 .showPendidikan {
+  display: block;
+}
+
+.container .feedbackContainer {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  padding-bottom: 50px;
+}
+
+.container .feedbackContainer .successFeedback {
+  background-color: #84f884;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container .feedbackContainer .failFeedback {
+  background-color: #f88484;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container .feedbackContainer p {
+  font-size: 16px;
+  color: var(--grey);
+}
+
+.container .feedbackContainer textarea {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.container .feedbackContainer .rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.container .feedbackContainer .rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.container .feedbackContainer .rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.container .feedbackContainer .rate:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.container .feedbackContainer .rate > input:checked ~ label {
+  color: #ffc700;
+}
+
+.container .feedbackContainer .rate:not(:checked) > label:hover,
+.container .feedbackContainer .rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+
+.container .feedbackContainer .rate > input:checked + label:hover,
+.container .feedbackContainer .rate > input:checked + label:hover ~ label,
+.container .feedbackContainer .rate > input:checked ~ label:hover,
+.container .feedbackContainer .rate > input:checked ~ label:hover ~ label,
+.container .feedbackContainer .rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.container .feedbackContainer #ratingValue {
+  margin-top: 30px;
+  position: absolute;
+  left: 30px;
+}
+
+.container .feedbackContainer span {
+  margin-top: 40px;
+  position: absolute;
+  left: 30px;
+  font-size: 15px;
+  color: red;
+}
+
+.container .feedbackContainer .tblKirim {
+  margin-top: 80px;
+  text-align: center;
+  display: block;
+}
+
+.container .feedbackContainer .tblKirim button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: var(--grey);
+  color: white;
+}
+
+.container .contentForUser {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+.container .contentForUser pre {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 18px;
+  color: var(--grey);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
+.container .contentForUser textarea {
+  margin-top: 20px;
+  padding: 30px;
+  width: 100%;
+  font-size: 17px;
+  border: none;
+}
+
+.container .contentForUser h4 {
+  color: var(--grey);
+  font-size: 22px;
+}
+
+.container .contentForUser p {
+  font-size: 16px;
+  color: var(--grey);
+  margin-top: 20px;
+}
+
+.container .contentForUser .videoFrame, .container .contentForUser .custom2 {
+  margin-top: 60px;
+  padding: 0px 30px;
+}
+
+.container .contentForUser a.linkKeLatihan {
+  display: block;
+  margin: 30px;
+  padding: 10px;
+  background: #2b9fe2;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .listMateri {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+.container .listMateri .formSearch {
+  padding: 10px;
+}
+
+.container .listMateri .formSearch input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid var(--thickBlue);
+}
+
+.container .listMateri .formSearch button {
+  padding: 10px;
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid var(--thickBlue);
+  background-color: var(--thickBlue);
+  color: white;
+  cursor: pointer;
+}
+
+.container .listMateri .materiContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.container .listMateri .materiContainer a {
+  -webkit-box-flex: 33.33%;
+      -ms-flex: 33.33%;
+          flex: 33.33%;
+  margin: 10px;
+  background: white;
+  color: black;
+  border: 1px solid gray;
+  margin-top: 20px;
+  padding: 20px 10px;
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .listMateri .materiContainer a i {
+  margin-right: 20px;
+}
+
+.container .listMateri .materiContainer a:hover {
+  background: var(--grey);
+  color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .dataDiriPelajar {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+.container .dataDiriPelajar .fotoPelajar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container .dataDiriPelajar .fotoPelajar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #c7c7c7;
+}
+
+.container .dataDiriPelajar .iconEditProfil {
+  text-align: right;
+}
+
+.container .dataDiriPelajar .iconEditProfil button {
+  font-size: 22px;
+  color: var(--thickBlue);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.container .dataDiriPelajar span {
+  display: block;
+  font-size: 16px;
+  color: var(--grey);
+  margin: 20px 0px 10px 0px;
+}
+
+.container .dataDiriPelajar input, .container .dataDiriPelajar select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.container .dataDiriPelajar input#tblEditProfile, .container .dataDiriPelajar select#tblEditProfile {
+  margin-top: 20px;
+  background: var(--grey);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.container .category {
+  margin-top: 30px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+.container .category p {
+  margin: 20px;
+  font-size: 20px;
+  color: var(--grey);
+  font-weight: bold;
+}
+
+.container .category .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .category .cards a {
+  background: url(../../images/study.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container .category .cards a.card1, .container .category .cards a.card2, .container .category .cards a.card3 {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 5px 10px #e2e2e2;
+          box-shadow: 0px 5px 10px #e2e2e2;
+  border: 1px solid #c5c5c5;
+}
+
+.container .category .cards a.card1 img, .container .category .cards a.card2 img, .container .category .cards a.card3 img {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+}
+
+.container .category .tambahMateri {
+  padding: 20px;
+}
+
+.container .category .tambahMateri a {
+  background: #31c031;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.container .category .formTambahMateri {
+  padding: 20px;
+}
+
+.container .category .formTambahMateri .pesanTambahkanMateri {
+  text-align: center;
+  background-color: #75f175;
+  padding: 5px;
+}
+
+.container .category .formTambahMateri .pesanTambahkanMateri p {
+  color: white;
+  font-size: 16px;
+}
+
+.container .category .formTambahMateri .pesanTambahkanMateri2 {
+  text-align: center;
+  background-color: #df6757;
+  padding: 5px;
+}
+
+.container .category .formTambahMateri .pesanTambahkanMateri2 p {
+  color: white;
+  font-size: 16px;
+}
+
+.container .category .formTambahMateri form span {
+  margin-top: 15px;
+  display: block;
+  font-size: 16px;
+  color: var(--grey);
+}
+
+.container .category .formTambahMateri form input, .container .category .formTambahMateri form textarea, .container .category .formTambahMateri form select {
+  margin-top: 7px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+.container .category .formTambahMateri form input:focus, .container .category .formTambahMateri form textarea:focus, .container .category .formTambahMateri form select:focus {
+  -webkit-box-shadow: 0px 5px 10px #f3f3f3;
+          box-shadow: 0px 5px 10px #f3f3f3;
+}
+
+.container .category .formTambahMateri form textarea {
+  height: 60px;
+}
+
+.container .category .formTambahMateri form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--grey);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.container .category .formEditMateri {
+  padding: 20px;
+}
+
+.container .category .formEditMateri form span {
+  margin-top: 15px;
+  display: block;
+  font-size: 16px;
+  color: var(--grey);
+}
+
+.container .category .formEditMateri form input, .container .category .formEditMateri form textarea, .container .category .formEditMateri form select {
+  margin-top: 7px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+}
+
+.container .category .formEditMateri form input:focus, .container .category .formEditMateri form textarea:focus, .container .category .formEditMateri form select:focus {
+  -webkit-box-shadow: 0px 5px 10px #f3f3f3;
+          box-shadow: 0px 5px 10px #f3f3f3;
+}
+
+.container .category .formEditMateri form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--grey);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.container .category .tabelMateri {
+  padding: 0px 20px;
+  width: 100%;
+}
+
+.container .category .tabelMateri .styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.container .category .tabelMateri .styled-table thead tr {
+  background-color: var(--thickBlue);
+  color: #ffffff;
+  text-align: left;
+}
+
+.container .category .tabelMateri .styled-table th, .container .category .tabelMateri .styled-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.container .category .tabelMateri .styled-table th a.editButton, .container .category .tabelMateri .styled-table td a.editButton {
+  background-color: #44be44;
+  padding: 5px 7px;
+  color: white;
+  border-radius: 5px;
+}
+
+.container .category .tabelMateri .styled-table th a.deleteButton, .container .category .tabelMateri .styled-table td a.deleteButton {
+  background-color: #be4444;
+  padding: 5px 7px;
+  color: white;
+  border-radius: 5px;
+}
+
+.container .category .tabelMateri .styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.container .category .tabelMateri .styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.container .category .tabelMateri .styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--thickBlue);
+}
+
+.container .category .formSearch {
+  padding: 20px;
+}
+
+.container .category .formSearch input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid var(--thickBlue);
+}
+
+.container .category .formSearch button {
+  padding: 10px;
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid var(--thickBlue);
+  background-color: var(--thickBlue);
+  color: white;
+}
+
+.container .category .notifUpdate p {
+  background-color: #51bb51;
+  padding: 15px;
+  display: inline-block;
+  color: white;
+  border-radius: 5px;
+  font-weight: 200;
+}
+
+.container .graph {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .graph .graph1, .container .graph .graph2, .container .graph .graph3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+.container .graph .graph1 .gambarKeterangan i, .container .graph .graph2 .gambarKeterangan i, .container .graph .graph3 .gambarKeterangan i {
+  font-size: 50px;
+  color: #fdfdfd;
+}
+
+.container .graph .graph1 p, .container .graph .graph2 p, .container .graph .graph3 p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fdfdfd;
+  text-align: center;
+}
+
+.container .graph .graph1 i, .container .graph .graph2 i, .container .graph .graph3 i {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fdfdfd;
+}
+
+.container .graph .graph1 a, .container .graph .graph2 a, .container .graph .graph3 a {
+  font-size: 18px;
+  color: #fdfdfd;
+  font-weight: bold;
+}
+
+.container .graph .graph1 {
+  background-color: #63a0e6;
+}
+
+.container .graph .graph2 {
+  background-color: #ece033;
+}
+
+.container .graph .graph3 {
+  background-color: #5efa3e;
+}
+
+@media screen and (max-width: 780px) {
+  .leftNav {
+    display: none;
+  }
+  .topNav {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 10px lightgray;
+            box-shadow: 0px 5px 10px lightgray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 30px;
+  }
+  .topNav .logoResponsive {
+    display: block;
+  }
+  .topNav .logoResponsive img {
+    width: 100px;
+    height: auto;
+  }
+  .topNav .dropdown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .topNav .pointContent {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .bottomNav {
+    z-index: 2;
+    background-color: var(--grey);
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .bottomNav a {
+    color: #b8b8b8;
+    margin: 0 auto;
+    display: block;
+  }
+  .bottomNav a.active {
+    color: white;
+  }
+  .container {
+    position: absolute;
+    right: 0px;
+    margin-left: 0px;
+    margin: 20px;
+    left: 0px;
+  }
+  .container .feedbackRespons {
+    margin-bottom: 100px;
+  }
+  .container .feedbackRespons .card pre {
+    font-size: 16px;
+  }
+  .container .title {
+    margin-top: 80px;
+  }
+  .container .title p {
+    font-size: 20px;
+  }
+  .container .title span {
+    font-size: 16px;
+  }
+  .container .listMateri {
+    margin-bottom: 100px;
+  }
+  .container .listMateri .formSearch input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--thickBlue);
+  }
+  .container .listMateri .formSearch button {
+    display: none;
+  }
+  .container .listMateri .materiContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin-top: 10px;
+  }
+  .container .grafikPengerjaan {
+    margin-bottom: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .grafikPengerjaan .bagianKedua {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .container .dataDiriPelajar {
+    margin-bottom: 100px;
+  }
+  .container .kelolaSoal {
+    margin-bottom: 100px;
+  }
+  .container .kelolaSoal .card2 .popUpPendidikan {
+    left: 20px;
+    margin-top: 0px;
+  }
+  .container .kelolaSoal .card3 .tabcontent table tr td a {
+    padding: 10px;
+    font-size: 15px;
+    display: inline-block;
+  }
+  .container .contentTambahSoal {
+    margin-bottom: 100px;
+  }
+  .container .category {
+    padding: 20px;
+    margin-bottom: 100px;
+  }
+  .container .category p {
+    margin: 0px;
+  }
+  .container .category .tambahMateri {
+    padding: 30px 0px 50px 0px;
+  }
+  .container .category .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .category .cards a.card1, .container .category .cards a.card2, .container .category .cards a.card3 {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .container .category .formSearch {
+    padding: 15px 0px 0px 0px;
+  }
+  .container .category .formSearch input {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .container .category .formSearch button {
+    display: none;
+  }
+  .container .category .tabelMateri {
+    padding: 0px 0px;
+    width: 100%;
+  }
+  .container .graph {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 100px;
+  }
+  .container .graph .graph1, .container .graph .graph2, .container .graph .graph3 {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .container .contentForUser {
+    margin-bottom: 100px;
+  }
+  .container .contentForUser pre {
+    font-size: 15px;
+  }
+  .container .contentForUser h4 {
+    color: var(--grey);
+    font-size: 20px;
+  }
+  .container .contentForUser p {
+    font-size: 16px;
+    color: var(--grey);
+    margin-top: 20px;
+  }
+  .container .contentForUser .videoFrame, .container .contentForUser .custom2 {
+    margin-top: 00px;
+    padding: 0px 30px;
+  }
+  .container .contentForUser .custom1, .container .contentForUser .videoFrame {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin: 20px;
+    padding: 20px;
+  }
+  .container .contentForUser .custom2, .container .contentForUser .videoFrame2 {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 90%;
+  }
+  .container .contentForUser .custom2 iframe, .container .contentForUser .videoFrame2 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .container .contentForUser #tutorial-pdf-responsive {
+    max-width: 900px;
+    max-height: 700px;
+    overflow: hidden;
+  }
+  .container .templateSoalLatihan, .container .donasiContainer, .container .feedbackContainer, .container .leaderboardContainer {
+    margin-bottom: 100px;
+  }
+  .container .donasiContainer p {
+    font-size: 16px;
+  }
+  .container .donasiContainer .iconDonate a {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

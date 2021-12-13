@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+:root {
+  --Roboto: 'Roboto', sans-serif;
+  --smootBlue: #EBF5FC;
+  --thickBlue: #2A4CA9;
+  --grey: #4F5159;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--Roboto);
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .leftGrid {
+  width: 100%;
+  height: 100%;
+  background: var(--smootBlue);
+}
+
+.container .leftGrid .logo {
+  padding: 50px;
+}
+
+.container .leftGrid h1 {
+  font-size: 45px;
+  color: black;
+  margin: 0px 50px;
+}
+
+.container .leftGrid h1 span {
+  color: var(--thickBlue);
+}
+
+.container .leftGrid .studentImages {
+  text-align: center;
+}
+
+.container .leftGrid .studentImages img {
+  width: 400px;
+}
+
+.container .rightGrid {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .rightGrid h4 {
+  font-size: 30px;
+  margin: 0px 40px;
+}
+
+.container .rightGrid p {
+  font-size: 18px;
+  color: var(--grey);
+  margin: 10px 40px;
+}
+
+.container .rightGrid .logo {
+  display: none;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.container .rightGrid .formLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px;
+}
+
+.container .rightGrid .formLogin span.errorMessage {
+  color: red;
+  font-size: 12px;
+}
+
+.container .rightGrid .formLogin span.successMessage {
+  background-color: #75f175;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+
+.container .rightGrid .formLogin .twoColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .rightGrid .formLogin .twoColumn .firstColumn, .container .rightGrid .formLogin .twoColumn .secondColumn {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .rightGrid .formLogin .twoColumn .firstColumn {
+  margin-right: 20px;
+}
+
+.container .rightGrid .formLogin span {
+  font-size: 16px;
+  color: black;
+  margin: 10px 0px;
+  font-weight: bold;
+}
+
+.container .rightGrid .formLogin input, .container .rightGrid .formLogin select {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--thickBlue);
+}
+
+.container .rightGrid .formLogin input:focus, .container .rightGrid .formLogin select:focus {
+  -webkit-box-shadow: 0px 5px 10px #9dd2eb;
+          box-shadow: 0px 5px 10px #9dd2eb;
+}
+
+.container .rightGrid .formLogin button {
+  margin: 15px 0px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: var(--thickBlue);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container .rightGrid .formLogin .haveAccount {
+  font-size: 16px;
+  color: black;
+  text-align: center;
+}
+
+.container .rightGrid .formLogin .haveAccount a {
+  color: var(--thickBlue);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 860px) {
+  .container {
+    height: auto;
+  }
+  .container .leftGrid {
+    display: none;
+  }
+  .container .rightGrid {
+    padding-top: 40px;
+  }
+  .container .rightGrid .logo {
+    display: block;
+  }
+  .container .rightGrid p {
+    margin-bottom: -10px;
+  }
+  .container .rightGrid .formLogin .twoColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=login.css.map */

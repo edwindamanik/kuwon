@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --Roboto: 'Roboto', sans-serif;
+    --smootBlue: #EBF5FC;
+    --thickBlue: #2A4CA9;
+    --grey: #4F5159;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Roboto);
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .leftGrid {
+        width: 100%;
+        height: 100%;
+        background: var(--smootBlue);
+
+        .logo {
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: black;
+            margin: 0px 50px;
+
+            span {
+                color: var(--thickBlue);
+            }
+        }
+
+        .studentImages {
+            text-align: center;
+
+            img {
+                width: 400px;
+            }
+        }
+    }
+
+    .rightGrid {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+            font-size: 30px;
+            margin: 0px 40px;
+        }
+
+        p {
+            font-size: 18px;
+            color: var(--grey);
+            margin: 10px 40px;
+        }
+
+        .logo {
+            display: none;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .formLogin {
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+
+            span {
+                
+                &.errorMessage {
+                    color: red;
+                    font-size: 12px;
+                }
+
+                &.successMessage {
+                    background-color: rgb(117, 241, 117);
+                    padding: 10px;
+                    text-align: center;
+                    color: white;
+                    border-radius: 5px;
+                }
+            }
+
+            .twoColumn {
+                display: flex;
+
+                .firstColumn, .secondColumn {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .firstColumn {
+                    margin-right: 20px;
+                }
+            }
+
+            span {
+                font-size: 16px;
+                color: black;
+                margin: 10px 0px;
+                font-weight: bold;
+            }
+
+            input, select {
+                background: white;
+                padding: 10px;
+                border-radius: 5px;
+                border: 2px solid var(--thickBlue);
+
+                &:focus {
+                    box-shadow: 0px 5px 10px rgb(157, 210, 235);
+                }
+            }
+
+            button {
+                margin: 15px 0px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: var(--thickBlue);
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .haveAccount {
+                font-size: 16px;
+                color: black;
+                text-align: center;
+
+                a {
+                    color: var(--thickBlue);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .container {
+        height: auto;
+        .leftGrid {
+            display: none;
+        }
+
+        .rightGrid {
+            padding-top: 40px;
+            .logo {
+                display: block;
+            }
+
+            p {
+                margin-bottom: -10px;
+            }
+
+            .formLogin {
+                
+                .twoColumn {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
