@@ -80,11 +80,11 @@
                     @enderror<br>
                     <input type="hidden" name="tingkatPendidikan" value="kuliah">
                 </div>
-                <div class="tambahJumlahSoal">
-                    <a type="click" class="deretanSoal" onclick="deretanSoal3()">Tambah Soal&nbsp;<i class="fas fa-plus-circle"></i></a>
-                </div>
-                <button type="submit" form="formActionSoal2">Kirim Soal</button>
             </form>
+            <div class="tambahJumlahSoal">
+                <a type="click" class="deretanSoal" onclick="deretanSoal3()">Tambah Soal&nbsp;<i class="fas fa-plus-circle"></i></a>
+            </div>
+            <button type="submit" form="formActionSoal3">Kirim Soal</button>
         </div>
 
     </div>

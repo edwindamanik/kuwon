@@ -58,6 +58,6 @@ function deretanSoal3()
                 </select>\
             </div>'
 
-    var formAction = document.getElementById("formActionSoal2");
+    var formAction = document.getElementById("formActionSoal3");
     formAction.innerHTML+=html
 }

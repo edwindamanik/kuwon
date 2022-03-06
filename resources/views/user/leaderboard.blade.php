@@ -14,6 +14,14 @@
 <a href="{{ URL('/profilee') }}">Profil</a>
 @endsection
 
+@section('bottomNav')
+    <a href="{{ URL('/dashboard') }}" title="Dashboard"><i class="fas fa-home"></i></a>
+    <a href="{{ URL('/materi') }}" title="Materi Pembelajaran"><i class="fas fa-book-open"></i></a>
+    <a href="{{ URL('/donasi') }}" title="Berikan Donasi"><i class="fas fa-donate"></i></a>
+    <a href="{{ URL('/feedback') }}" title="Umpan Balik"><i class="fas fa-comments"></i></a>
+    <a href="{{ URL('/leaderboard') }}" class="active" title="Leaderboard"><i class="fas fa-chart-line"></i></a>
+@endsection
+
 @section('contentPoint')
 <div class="pointContent">
     <p><i class="fas fa-star" style="margin-right: 10px;"></i>{{ Auth::user()->point }}</p>
